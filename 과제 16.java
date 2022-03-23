@@ -12,6 +12,7 @@ public class Main {
 		int aa;
 		double b;
 		int bb;
+		System.out.print("정수의 2진수: ");
 		for(int i = 8; i >= 1; i--) {	   //8bit로 계산 
 			a = A % Math.pow(2,i);         //제곱 함수(2의 i제곱)
 			b = 0 * (A/Math.pow(2,i));
@@ -25,6 +26,24 @@ public class Main {
 			}
 			else if(a == 0.0) {
 				aa = 0;
+				System.out.print(aa);
+			}
+		}
+		System.out.println("");
+		System.out.print("비트 반전: ");
+		for(int i = 8; i >= 1; i--) {	   //8bit로 계산 
+			a = A % Math.pow(2,i);         //제곱 함수(2의 i제곱)
+			b = 0 * (A/Math.pow(2,i));
+			if(A < Math.pow(2,i-1)) {
+				aa = 1;
+				System.out.print(aa);
+			}
+			else if(a != 0.0) {
+			    aa = 0;
+			    System.out.print(aa);
+			}
+			else if(a == 0.0) {
+				aa = 1;
 				System.out.print(aa);
 			}
 		}
