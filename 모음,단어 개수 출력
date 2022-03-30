@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Hello	{
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		String str;
+		int Vcnt = 0;			//모음
+		int Wcnt = 1;			//단어
+		System.out.print("문자열 입력: ");
+		str = input.nextLine();
+		
+		char sent[] = new char[str.length()];
+		
+		for(int i = 0; i < str.length(); i++) {
+			sent[i] = str.charAt(i);
+			if(sent[i] == 'a' || sent[i] == 'e' ||
+			   sent[i] == 'i' || sent[i] == 'o' ||
+			   sent[i] == 'u') {
+				Vcnt++;
+			}
+			else if(sent[i] == ' ')
+				Wcnt++;
+		}
+		System.out.print("모음의 개수는 " + Vcnt + ", 단어의 개수는 " 
+						 + Wcnt + "입니다.");
+		//1152 백준 예제
+	}
+}
