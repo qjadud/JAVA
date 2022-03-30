@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Hello {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int x, y;
+		int n;
+		int cnt = 0;
+		
+		System.out.print("숫자 n 입력: ");
+		n = input.nextInt();
+		System.out.print("x: ");
+		x = input.nextInt();
+		System.out.print("y: ");
+		y = input.nextInt();
+		int arr[][] = new int[n][n];
+		
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = ++cnt;
+			}	
+		}
+		System.out.print("[" + x + ", " + y + "]에 위치한 원소값은" + 
+							arr[x][y] + "입니다.");	
+	}
+}
