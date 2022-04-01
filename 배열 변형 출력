@@ -1,0 +1,26 @@
+public class Hello2 {
+
+	public static void main(String[] args) {
+		int array[][] = new int[5][5];
+		int cnt = 1;
+		
+		for(int i = 0; i < 5; i++) {
+			if(i%2 == 0) {
+				for(int j = 0; j < 5; j++) {
+					array[i][j] = cnt++;
+				}
+			}
+			else {
+				for(int j = 4; j >= 0; j--) {
+					array[i][j] = cnt++;
+				}
+			}			
+		}
+		for(int i = 0; i < 5; i++) {
+			for(int j = 0; j < 5; j++) {
+				System.out.print(array[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+}
